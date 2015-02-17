@@ -20,6 +20,9 @@ alias gpum='git pull upstream master'
 alias grum='git fetch upstream && git rebase upstream/master'
 alias gcb='git checkout -b'
 
+alias python=python3
+alias pip=pip3
+
 # prompt (https://github.com/sindresorhus/pure)
 autoload -U promptinit && promptinit
 prompt pure
