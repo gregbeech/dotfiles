@@ -13,15 +13,18 @@ compinit
 # End of lines added by compinstall
 
 # aliases
-alias gc='git clone'
 alias gs='git status'
-alias grau='git remote add upstream'
-alias gpum='git pull upstream master'
-alias grum='git fetch upstream && git rebase upstream/master'
+alias gl='git log --pretty=oneline --abbrev-commit'
+alias gc='git checkout'
 alias gcb='git checkout -b'
+alias gp='git pull'
+alias gpush='git push'
+alias gpushup='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
-alias python=python3
-alias pip=pip3
+alias redis-start='launchctl start homebrew.mxcl.redis'
+alias redis-stop='launchctl stop homebrew.mxcl.redis'
+
+alias ssh-staging='ssh -A -l gsb test.deliveroo.com'
 
 # prompt (https://github.com/sindresorhus/pure)
 autoload -U promptinit && promptinit
@@ -42,4 +45,5 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # paths
-PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:/usr/local/sbin
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin/:$PATH"
